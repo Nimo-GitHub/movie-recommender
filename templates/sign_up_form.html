@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <title>Register</title>
+  
+
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    
+        <div class=" container">
+            <form method="POST" action="/signup">
+            {% csrf_token%}
+              <h2>Register</h2>
+              <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text"  placeholder="Username" name="usrnm">
+              </div>
+
+              <div class="input-container">
+                <i class="fa fa-envelope icon"></i>
+                <input class="input-field" type="text" placeholder="Email" name="email">
+              </div>
+
+              <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input class="input-field"  type="password" placeholder="Password" name="psw">
+             </div>
+
+              <button type="submit" class="btn">Sign Up</button>
+    
+
+  
+  
+</form>
+</div>
+
+</body>
+</html>
